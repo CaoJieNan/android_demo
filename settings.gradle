@@ -1,0 +1,5 @@
+rootProject.name='android-demo'
+include ':app'
+include ':kotlinlibrary'
+include ':darkmodelibrary'
+include ':jetpacklibrary'

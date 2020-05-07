@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".architecture.ArchitectureActivity">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:onClick="onDataBindingClick"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:text="DataBinding"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="21sp"-->
+<!--            android:gravity="center"/>-->
+
+<!--        <TextView-->
+<!--            android:onClick="onDataBindingClick"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingVertical="16dp"-->
+<!--            android:text="@string/data_binding"-->
+<!--            android:textSize="16sp"-->
+<!--            android:gravity="center"/>-->
+
+
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".JetpackActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:onClick="onDataBindingClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="DataBinding"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:onClick="onLifecycleClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Lifecycles"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:onClick="onLiveDataClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="LiveData"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:onClick="onNavigationClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Navigation"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:onClick="onPagingClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Paging"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:onClick="onRoomClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Romm"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:onClick="onViewModelClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="ViewModel"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:onClick="onWorkManagerClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="WorkManager"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

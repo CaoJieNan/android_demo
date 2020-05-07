@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android练习</string>
+    <string name="dark_mode_title">暗黑模式</string>
+    <string name="dark_mode_content">1.主题继承 Theme.AppCompat.DayNight\n2.在res下再新建一个values-night、drawable-night-xhdpi的文件夹\n3.切换主题的方法 AppCompatDelegate.setDefaultNightMode()\n4.延迟配置更改，应用可以通过声明每个Activity可以处理uiMode，当Activity声明它处理配置更改时，onConfigurationChanged()将在主题更改时调用其方法。</string>
+    <string name="jetpack_title">Jetpack系列</string>
+    <string name="jetpack_content">分四大模块\n1.架构\n2.基础\n3.行为\n4.界面</string>
+<!--    <string name="jetpack_content">1.Data Bingding（数据绑定）\n2.Lifecycle（生命周期）\n3.Paging（分页）\n4.ViewModel（以注重生命周期的方式管理界面的相关数据）\n5.LiveData（底层数据通知更改视图）\n6.Room（数据库）\n7.WorkManager（后台任务管家）</string>-->
+</resources>
+

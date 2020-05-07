@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textview_width">100dp</dimen>
+    <dimen name="textview_height">20dp</dimen>
+    <dimen name="padding_v">16dp</dimen>
+    <dimen name="padding_h">8dp</dimen>
+    <dimen name="margin_v">8dp</dimen>
+    <dimen name="margin_h">8dp</dimen>
+    <dimen name="largePadding">16dp</dimen>
+    <dimen name="smallPadding">8dp</dimen>
+</resources>
