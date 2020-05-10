@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="androidx.databinding.ObservableMap"/>
+        <import type="androidx.databinding.ObservableList"/>
+
+        <variable
+            name="userage"
+            type="androidx.databinding.ObservableInt" />
+        <variable
+            name="username"
+            type="androidx.databinding.ObservableField" />
+        <variable
+            name="userdata"
+            type="ObservableMap&lt;String,String>" />
+        <variable
+            name="userlist"
+            type="ObservableList&lt;Object>" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(userage)}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(username)}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(userdata.all)}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(userlist[0])}"/>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <!-- 使用事件绑定，方法引用 -->
+    <variable
+        name="event"
+        type="cn.shenzhencj.jetpacklibrary.architecture.databinding.bind1.EventListener" />
+    <!-- 使用事件绑定，监听器绑定 -->
+    <variable
+        name="iview"
+        type="cn.shenzhencj.jetpacklibrary.architecture.databinding.bind1.IView" />
+    <variable
+        name="presenter"
+        type="cn.shenzhencj.jetpacklibrary.architecture.databinding.bind1.Presenter" />
+
+    <!-- 使用集合 -->
+    <import type="java.util.List"/>
+    <import type="java.util.Map"/>
+
+    <variable
+        name="listData"
+        type="List&lt;String>" />
+    <variable
+        name="mapData"
+        type="Map&lt;String,String>" />
+
+    <!-- 使用实体 -->
+    <variable
+        name="user"
+        type="cn.shenzhencj.jetpacklibrary.architecture.databinding.bind1.User" />
+
+    <!-- 使用基础变量 -->
+    <variable
+        name="age"
+        type="int" />
+    <variable
+        name="sex"
+        type="String" />
+    <variable
+        name="province_control"
+        type="boolean" />
+
+    <variable
+        name="workyear_control"
+        type="boolean" />
+
+</data>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="账号"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@{user.username, default=caojie}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="密码"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@{user.password, default=123456}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="年龄"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@{String.valueOf(age), default=24}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="性别"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@{sex, default=男}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="省份/地区"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@{province_control? @stringArray/provinces1 : @stringArray/provinces1}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="工作经验"/>
+
+        <TextView
+            android:padding="@{workyear_control? @dimen/largePadding : @dimen/smallPadding}"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(user.workyear), default=0}"
+            android:background="@android:color/holo_green_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="集合处理：List、Map"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text='@{"list=" + listData[0]}'/>
+            <TextView
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text='@{"map=" + mapData["one"]}'/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="事件处理"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="方法引用"
+                android:onClick="@{event::onClick1}"/>
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="监听器绑定"
+                android:onClick="@{() -> presenter.apply(iview)}"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+</layout>

@@ -1,4 +1,4 @@
-package cn.shenzhencj.jetpacklibrary.architecture.databinding
+package cn.shenzhencj.jetpacklibrary.architecture.databinding.bind1
 
 import android.view.View
 import android.widget.Toast
