@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="userModel"
+            type="cn.shenzhencj.jetpacklibrary.architecture.databinding.bind4.UserModel" />
+        <variable
+            name="userObservable"
+            type="cn.shenzhencj.jetpacklibrary.architecture.databinding.bind4.UserObservable" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@{userModel.name}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@{userObservable.userPassword2, default=123456}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <!--
+            @={} 表示法接收属性的数据更改并同时监听用户更新，
+            其中重要的是包含“=”符号
+        -->
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@={userObservable.userRemember}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@{String.valueOf(userModel.age)}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="changed"
+            android:onClick="@{() -> userObservable.onRefreshData()}"/>
+
+    </LinearLayout>
+</layout>

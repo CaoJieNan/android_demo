@@ -12,6 +12,7 @@ import cn.shenzhencj.jetpacklibrary.architecture.databinding.bind1.DataBindingFr
 import cn.shenzhencj.jetpacklibrary.architecture.databinding.bind1.IView
 import cn.shenzhencj.jetpacklibrary.architecture.databinding.bind2.DataBindingFragment2
 import cn.shenzhencj.jetpacklibrary.architecture.databinding.bind3.DataBindingFragment3
+import cn.shenzhencj.jetpacklibrary.architecture.databinding.bind4.DataBindingFragment4
 
 /**
  * Databinding在Activity和Fragment中使用的注意事项：
@@ -25,6 +26,7 @@ class DataBindingActivity : AppCompatActivity(),
     val f1 = DataBindingFragment1()
     val f2 = DataBindingFragment2()
     val f3 = DataBindingFragment3()
+    val f4 = DataBindingFragment4()
     var current:Fragment?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,9 +68,8 @@ class DataBindingActivity : AppCompatActivity(),
     fun onClick3(view:View){
         toggle(f3)
     }
-
     fun onClick4(view:View){
-
+        toggle(f4)
     }
 
     private fun toggle(f:Fragment){

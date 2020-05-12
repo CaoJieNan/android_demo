@@ -36,6 +36,7 @@ import com.squareup.picasso.Picasso
  * 绑定适配器，用来设置布局中View的自定义属性，当使用该属性时，可以自定义其行为。
  * 注意：如果你的Kotlin代码里面有使用到注解，那么需要加入这个插件：apply plugin: 'kotlin-kapt'
  *
+ *
  */
 class DataBindingFragment3:Fragment() {
 
