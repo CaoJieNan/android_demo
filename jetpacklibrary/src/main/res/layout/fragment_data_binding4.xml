@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:gravity="center"
-            android:text="@{userObservable.userPassword2, default=123456}"
+            android:text="@{userObservable.userPassword, default=123456}"
             android:textColor="@android:color/black"
             android:textSize="16sp"/>
 
