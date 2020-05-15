@@ -2,10 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.shenzhencj.jetpacklibrary">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application>
-        <activity android:name=".architecture.ArchitectureActivity"/>
+        <activity android:name=".architecture.lifecycles.LifeCyclesActivity"></activity>
+        <activity android:name=".architecture.ArchitectureActivity" />
         <activity android:name=".architecture.databinding.DataBindingActivity" />
         <activity android:name=".JetpackActivity" />
     </application>

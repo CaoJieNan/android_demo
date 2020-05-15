@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import cn.shenzhencj.jetpacklibrary.R
 import cn.shenzhencj.jetpacklibrary.architecture.databinding.DataBindingActivity
+import cn.shenzhencj.jetpacklibrary.architecture.lifecycles.LifeCyclesActivity
 
 class ArchitectureActivity : AppCompatActivity() {
 
@@ -17,7 +18,7 @@ class ArchitectureActivity : AppCompatActivity() {
         startActivity(Intent(this, DataBindingActivity::class.java))
     }
     fun onLifecycleClick(view:View){
-//        startActivity(Intent(this, DataBindingActivity::class.java))
+        startActivity(Intent(this, LifeCyclesActivity::class.java))
     }
     fun onLiveDataClick(view:View){
 //        startActivity(Intent(this, DataBindingActivity::class.java))

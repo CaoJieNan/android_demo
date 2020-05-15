@@ -8,21 +8,39 @@
         <variable
             name="imageError"
             type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="adapter"
+            type="cn.shenzhencj.jetpacklibrary.architecture.databinding.bind3.RecyclerViewAdapter" />
+        <variable
+            name="manager"
+            type="androidx.recyclerview.widget.LinearLayoutManager" />
+        <variable
+            name="animator"
+            type="androidx.recyclerview.widget.DefaultItemAnimator" />
     </data>
 
-    <LinearLayout
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@android:color/white">
 
         <ImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             app:imageUrl="@{imageUrl}"
             app:imageError="@{imageError}"/>
 
-    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{adapter}"
+            app:manager="@{manager}"
+            app:animator="@{animator}"/>
+
+    </RelativeLayout>
 
 </layout>

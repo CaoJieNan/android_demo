@@ -10,6 +10,8 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SimpleItemAnimator
 import cn.shenzhencj.jetpacklibrary.R
 import cn.shenzhencj.jetpacklibrary.databinding.FragmentDataBinding3Binding
 import com.squareup.picasso.Picasso
@@ -47,6 +49,18 @@ class DataBindingFragment3:Fragment() {
         @JvmStatic
         fun loadImage(view:ImageView,url:String, error:Drawable){
             Picasso.get().load(url).error(error).into(view)
+        }
+
+        @BindingAdapter("adapter", "manager", "animator", requireAll = true)
+        @JvmStatic
+        fun setupAdapter(view: RecyclerView,
+                         adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>,
+                         manager: RecyclerView.LayoutManager,
+                         animator: SimpleItemAnimator
+        ) {
+            view.adapter = adapter
+            view.layoutManager = manager
+            view.itemAnimator = animator
         }
     }
 
