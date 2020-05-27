@@ -13,10 +13,10 @@
             name="adapter"
             type="cn.shenzhencj.jetpacklibrary.architecture.databinding.bind3.RecyclerViewAdapter" />
         <variable
-            name="manager"
+            name="layoutManager"
             type="androidx.recyclerview.widget.LinearLayoutManager" />
         <variable
-            name="animator"
+            name="itemAnimator"
             type="androidx.recyclerview.widget.DefaultItemAnimator" />
     </data>
 
@@ -38,8 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:adapter="@{adapter}"
-            app:manager="@{manager}"
-            app:animator="@{animator}"/>
+            app:layoutManager="@{layoutManager}"
+            app:itemAnimator="@{itemAnimator}"/>
 
     </RelativeLayout>
 

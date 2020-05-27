@@ -2,6 +2,7 @@ package cn.shenzhencj.jetpacklibrary.architecture.databinding.bind3
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,8 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
 import cn.shenzhencj.jetpacklibrary.R
@@ -51,13 +54,14 @@ class DataBindingFragment3:Fragment() {
             Picasso.get().load(url).error(error).into(view)
         }
 
-        @BindingAdapter("adapter", "manager", "animator", requireAll = true)
+        @BindingAdapter("adapter", "layoutManager", "itemAnimator", requireAll = true)
         @JvmStatic
         fun setupAdapter(view: RecyclerView,
                          adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>,
                          manager: RecyclerView.LayoutManager,
                          animator: SimpleItemAnimator
         ) {
+            Log.i("DataBindingFragment3", "setupAdapter()")
             view.adapter = adapter
             view.layoutManager = manager
             view.itemAnimator = animator
@@ -73,6 +77,9 @@ class DataBindingFragment3:Fragment() {
             inflater, R.layout.fragment_data_binding3,container,false)
         dataBinding.imageUrl="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588935952996&di=e79e4cfcc6758cd8a78011d74fc3a492&imgtype=0&src=http%3A%2F%2Fd.ifengimg.com%2Fw600%2Fe0.ifengimg.com%2F01%2F2018%2F1125%2F19AA3D7883ED4B4715299053C797F99F4174ADA7_size109_w640_h370.jpeg"
         dataBinding.imageError = ContextCompat.getDrawable(context!!, R.drawable.image_error)
+        dataBinding.adapter = RecyclerViewAdapter()
+        dataBinding.itemAnimator = DefaultItemAnimator()
+        dataBinding.layoutManager = LinearLayoutManager(context)
         return dataBinding.root
         return null
     }
